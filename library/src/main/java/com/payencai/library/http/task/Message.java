@@ -17,7 +17,7 @@ public class Message implements Runnable{
     @Override
     public void run() {
         Exception e=response.getResException();
-        if(e==null)
+        if(e!=null)
             httpListener.onFail(e);
         else
             httpListener.onSuccess(response);

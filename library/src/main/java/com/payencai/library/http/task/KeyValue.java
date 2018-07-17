@@ -35,4 +35,8 @@ public class KeyValue {
         this.key = key;
         this.value = value;
     }
+    public  KeyValue(String key, int value){
+        this.key = key;
+        this.value = value;
+    }
 }

@@ -9,18 +9,29 @@ import java.util.List;
  */
 
 public class Request {
+    private Object header;
+
+    public Object getHeader() {
+        return header;
+    }
+
+    public void setHeader(Object header) {
+        this.header = header;
+    }
+
     private String reqUrl;
     private RequestMethod reqMethod;
     private List<KeyValue> keyValues;
 
     public Request(String url) {
-        this(url,RequestMethod.GET);
+        //this(url,RequestMethod.GET,header);
     }
 
-    public Request(String url, RequestMethod method) {
+    public Request(String url, RequestMethod method,Object header,List<KeyValue> keyValues) {
         this.reqUrl = url;
         this.reqMethod = method;
-        keyValues=new ArrayList<>();
+        this.keyValues=keyValues;
+        this.header=header;
     }
     public void add(String key,String value){
         keyValues.add(new KeyValue(key,value));

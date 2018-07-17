@@ -11,7 +11,7 @@ public class PosterHandler extends Handler {
     private static PosterHandler instance;
     public static PosterHandler getInstance(){
         if(instance==null)
-            synchronized (PosterHandler.getInstance()){
+            synchronized (PosterHandler.class){
                 if (instance==null)
                     instance=new PosterHandler();
             }

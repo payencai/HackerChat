@@ -22,12 +22,8 @@ public class Response {
     }
 
     private Exception resException;
-    public Response(Object resData,Map<String,List<String>> resHeaders, String resCode, Exception resException,Request request) {
-        this.resData = resData;
-        this.resCode = resCode;
-        this.resException = resException;
-        this.request=request;
-        this.resHeaders=resHeaders;
+    public Response() {
+
     }
 
     public Request getRequest() {
